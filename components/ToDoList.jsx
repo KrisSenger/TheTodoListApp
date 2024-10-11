@@ -1,17 +1,10 @@
-/**
- * My To Do List App
- *
- * @format
- */
-
 import React from 'react';
-import { SafeAreaView, StyleSheet, Pressable, View, Text, ScrollView} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Pressable, Text, ScrollView} from 'react-native';
 
-
-function ToDoList() {
+export default function ToDoForm() {
   return (
     <SafeAreaView>
-      <ScrollView>
+     <ScrollView>
         <Pressable>
           <View style={[styles.task, styles.completed]}>
             <Text style={styles.taskText}>Do laundry</Text>
@@ -45,5 +38,3 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-
-export default ToDoList;

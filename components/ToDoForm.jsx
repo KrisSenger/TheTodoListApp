@@ -1,7 +1,8 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, TextInput, Button} from 'react-native';
 
-function ToDoForm() {
+
+export default function ToDoForm() {
   return (
     <SafeAreaView>
       <View style={styles.form}>
@@ -32,5 +33,3 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
-
-export default ToDoForm;
