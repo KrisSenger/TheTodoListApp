@@ -3,9 +3,9 @@ import {SafeAreaView, StyleSheet, View, Pressable, Text, ScrollView} from 'react
 
 export default function ToDoList({tasks}) {
   return (
-    <li>
+    <li style={styles.completed}>
         {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
+          <li style={styles.task} key={index}>{task}</li>
         ))}
     </li>
   );
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   task: {
     padding: 10,
     borderBottomWidth: 1,
-    borderColor: '#ccc',
+    borderColor: 'ccc#',
   },
   completed: {
     backgroundColor: '#e0e0e0',
