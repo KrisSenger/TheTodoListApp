@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, TextInput, Button} from 'react-native';
+import {SafeAreaView, StyleSheet, View, TextInput, Pressable} from 'react-native';
 import { useState } from 'react';
 
 
@@ -23,8 +23,10 @@ export default function ToDoForm({addTask}) {
           onChangeText={setTaskText}
           value={taskText}
         />
-        <Button title="Add Task"
-                onPress={handleAddTask} />
+        <Pressable
+                onPress={handleAddTask}
+                style={styles.button}>Add Task
+        </Pressable>
       </View>
     </SafeAreaView>
   );
@@ -45,5 +47,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginRight: 10,
+  },
+  button: {
+    borderRadius: 5,
+    backgroundColor: '#ff33ff',
+    padding: 10,
   },
 });
