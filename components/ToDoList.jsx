@@ -1,13 +1,15 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Pressable, Text, ScrollView} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function ToDoList({tasks}) {
   return (
-    <li style={styles.completed}>
+    <View style={styles.completed}>
         {tasks.map((task, index) => (
-          <li style={styles.task} key={index}>{task}</li>
+          <View style={styles.task} key={index}>
+            <View style={styles.taskText}>{task}</View>
+          </View>
         ))}
-    </li>
+    </View>
   );
 }
 
@@ -15,10 +17,10 @@ const styles = StyleSheet.create({
   task: {
     padding: 10,
     borderBottomWidth: 1,
-    borderColor: 'ccc#',
   },
   completed: {
     backgroundColor: '#e0e0e0',
+    width: 275,
   },
   taskText: {
     fontSize: 16,
